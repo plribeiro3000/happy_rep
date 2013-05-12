@@ -47,7 +47,11 @@
           <%= link_to "HappyRep", root_path, :class => "brand" %>
           <div class="container nav-collapse">
             <ul class="nav">
-              <li><%= link_to "Entrar", new_user_session_path  %></li>
+              <% if user_signed_in? %>
+                  <li><%= link_to "Sair", destroy_user_session_path, :method => :delete %></li>
+              <% else %>
+                  <li><%= link_to "Entrar", new_user_session_path  %></li>
+              <% end %>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -65,7 +69,7 @@
               <h3>Sidebar</h3>
               <ul class="nav nav-list">
                 <li class="nav-header">Sidebar</li>
-                <li><%= link_to "Usuários", admin_users_path  %></li>
+                <li><%= link_to "Usuários", admin_users_path %></li>
               </ul>
             </div><!--/.well -->
           </div><!--/span-->

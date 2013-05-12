@@ -1,0 +1,10 @@
+br:
+  activerecord:
+    models:
+      user: "Usuário"
+    attributes:
+      user:
+        email: "Email"
+        password: "Senha"
+        password_confirmation: "Confirmação da senha"
+        remember_me: "Lembrar-me"
