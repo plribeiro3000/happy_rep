@@ -9,3 +9,7 @@
 /tmp
 
 /config/database.yml
+
+# Rails default files
+/test
+/app/helpers
