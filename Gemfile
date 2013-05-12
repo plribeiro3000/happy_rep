@@ -4,7 +4,7 @@ gem 'rails', '3.2.13'
 
 gem 'thin'
 
-gem 'sqlite3'
+gem 'mysql2'
 
 gem 'jquery-rails'
 
