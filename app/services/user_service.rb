@@ -4,6 +4,6 @@ module UserService
   end
 
   def self.find(id)
-    User.find(id)
+    UserAccessor.find(id)
   end
 end
