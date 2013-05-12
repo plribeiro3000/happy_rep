@@ -1,0 +1,19 @@
+<table>
+  <thead>
+  <tr>
+    <th>Email</th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @users.each do |user| %>
+      <tr>
+        <td><%= user.email %></td>
+        <td><%= link_to "Detalhar", ['admin', user] %></td>
+        <td><%= link_to "Apagar", ['admin', user], :data => { :confirm => "Você tem certeza?" }, :method => :delete %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
