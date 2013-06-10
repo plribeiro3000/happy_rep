@@ -13,3 +13,4 @@
 # Rails default files
 /test
 /app/helpers
+/config/database.yml
