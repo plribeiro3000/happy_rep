@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Kind:</b>
+  <%= @bill.kind %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%= @bill.value %>
+</p>
+
+<p>
+  <b>Expiration date:</b>
+  <%= @bill.expiration_date %>
+</p>
+
+<p>
+  <b>Pay date:</b>
+  <%= @bill.pay_date %>
+</p>
+
+<p>
+  <b>Penalty:</b>
+  <%= @bill.penalty %>
+</p>
+
+<p>
+  <b>Interest:</b>
+  <%= @bill.interest %>
+</p>
+
+
+<%= link_to 'Edit', edit_bill_path(@bill) %> |
+<%= link_to 'Back', bills_path %>
