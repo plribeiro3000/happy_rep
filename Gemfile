@@ -14,6 +14,8 @@ gem 'twitter-bootstrap-rails'
 
 gem 'responders'
 
+gem 'zertico'
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
