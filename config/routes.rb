@@ -1,4 +1,7 @@
 HappyRep::Application.routes.draw do
+  resources :bills
+
+
   devise_for :users
 
   namespace :admin do
