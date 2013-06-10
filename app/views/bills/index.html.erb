@@ -8,7 +8,6 @@
     <th>Pay date</th>
     <th>Penalty</th>
     <th>Interest</th>
-    <th>Responsible</th>
     <th></th>
     <th></th>
     <th></th>
@@ -22,7 +21,6 @@
     <td><%= bill.pay_date %></td>
     <td><%= bill.penalty %></td>
     <td><%= bill.interest %></td>
-    <td><%= bill.responsible %></td>
     <td><%= link_to 'Show', bill %></td>
     <td><%= link_to 'Edit', edit_bill_path(bill) %></td>
     <td><%= link_to 'Destroy', bill, method: :delete, data: { confirm: 'Are you sure?' } %></td>
