@@ -1,0 +1,2 @@
+class EventsController < AuthorizedController
+end
