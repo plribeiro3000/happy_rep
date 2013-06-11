@@ -34,6 +34,15 @@ ActiveRecord::Schema.define(:version => 20130611025044) do
     t.integer  "profile_id"
   end
 
+  create_table "events", :force => true do |t|
+    t.string   "name"
+    t.integer  "capacity"
+    t.float    "profit"
+    t.datetime "event_date"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "profiles", :force => true do |t|
     t.string   "name"
     t.date     "birthday"
