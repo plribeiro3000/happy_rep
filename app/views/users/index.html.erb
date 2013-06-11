@@ -11,8 +11,8 @@
   <% @users.each do |user| %>
       <tr>
         <td><%= user.email %></td>
-        <td><%= link_to "Detalhar", ['admin', user] %></td>
-        <td><%= link_to "Apagar", ['admin', user], :data => { :confirm => "Você tem certeza?" }, :method => :delete %></td>
+        <td><%= link_to "Detalhar", user %></td>
+        <td><%= link_to "Apagar", user, :data => { :confirm => "Você tem certeza?" }, :method => :delete %></td>
       </tr>
   <% end %>
   </tbody>
