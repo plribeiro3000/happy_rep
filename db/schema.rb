@@ -13,6 +13,17 @@
 
 ActiveRecord::Schema.define(:version => 20130611002204) do
 
+  create_table "bills", :force => true do |t|
+    t.string   "kind"
+    t.float    "value"
+    t.date     "expiration_date"
+    t.date     "pay_date"
+    t.float    "penalty"
+    t.float    "interest"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
   create_table "profiles", :force => true do |t|
     t.string   "name"
     t.date     "birthday"
