@@ -11,7 +11,35 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130610232807) do
+ActiveRecord::Schema.define(:version => 20130611002938) do
+
+  create_table "bills", :force => true do |t|
+    t.string   "kind"
+    t.float    "value"
+    t.date     "expiration_date"
+    t.date     "pay_date"
+    t.float    "penalty"
+    t.float    "interest"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  create_table "books", :force => true do |t|
+    t.string   "name"
+    t.string   "author"
+    t.integer  "edition"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "events", :force => true do |t|
+    t.string   "name"
+    t.integer  "capacity"
+    t.float    "profit"
+    t.datetime "event_date"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "profiles", :force => true do |t|
     t.string   "name"
@@ -40,11 +68,11 @@ ActiveRecord::Schema.define(:version => 20130610232807) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at",                             :null => false
-    t.datetime "updated_at",                             :null => false
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
   end
 
   add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true

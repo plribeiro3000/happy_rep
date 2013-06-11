@@ -2,6 +2,7 @@ class Profile < ActiveRecord::Base
   attr_accessible :address, :admission, :bio, :birthday, :college, :course, :cpf, :hometown, :name, :phone, :role
 
   belongs_to :user
+  has_many :book
 
   validates :name, :presence => true
   validates :birthday, :presence => true
