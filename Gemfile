@@ -10,6 +10,8 @@ gem 'jquery-rails'
 
 gem 'devise'
 
+gem 'cancan'
+
 gem 'twitter-bootstrap-rails'
 
 gem 'responders'
