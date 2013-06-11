@@ -1,5 +1,6 @@
 class Event < ActiveRecord::Base
   attr_accessible :capacity, :event_date, :name, :profit
 
-  validates_presence_of :capacity, :name
+  validates :capacity, :presence => true
+  validates :name, :presence => true
 end
