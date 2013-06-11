@@ -1,41 +1,45 @@
 <%= form_for(@bill) do |f| %>
-  <% if @bill.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@bill.errors.count, "error") %> prohibited this bill from being saved:</h2>
+    <% if @bill.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@bill.errors.count, "error") %> prohibited this bill from being saved:</h2>
 
-      <ul>
-      <% @bill.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+          <ul>
+            <% @bill.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :kind %><br />
+      <%= f.text_field :kind %>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :kind %><br />
-    <%= f.text_field :kind %>
-  </div>
-  <div class="field">
-    <%= f.label :value %><br />
-    <%= f.text_field :value %>
-  </div>
-  <div class="field">
-    <%= f.label :expiration_date %><br />
-    <%= f.date_select :expiration_date %>
-  </div>
-  <div class="field">
-    <%= f.label :pay_date %><br />
-    <%= f.date_select :pay_date %>
-  </div>
-  <div class="field">
-    <%= f.label :penalty %><br />
-    <%= f.text_field :penalty %>
-  </div>
-  <div class="field">
-    <%= f.label :interest %><br />
-    <%= f.text_field :interest %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="field">
+      <%= f.label :value %><br />
+      <%= f.text_field :value %>
+    </div>
+    <div class="field">
+      <%= f.label :expiration_date %><br />
+      <%= f.date_select :expiration_date %>
+    </div>
+    <div class="field">
+      <%= f.label :payment_date %><br />
+      <%= f.date_select :payment_date %>
+    </div>
+    <div class="field">
+      <%= f.label :penalty %><br />
+      <%= f.text_field :penalty %>
+    </div>
+    <div class="field">
+      <%= f.label :interest %><br />
+      <%= f.text_field :interest %>
+    </div>
+    <div>
+      <%= f.label :profile_id %><br />
+      <%= f.select :profile_id, options_from_collection_for_select(Profile.all, :id, :name) %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
 <% end %>

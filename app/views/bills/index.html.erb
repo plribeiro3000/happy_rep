@@ -1,6 +1,5 @@
-<h1>Listing bills</h1>
-
 <table>
+  <thead>
   <tr>
     <th>Kind</th>
     <th>Value</th>
@@ -12,20 +11,22 @@
     <th></th>
     <th></th>
   </tr>
-
-<% @bills.each do |bill| %>
-  <tr>
-    <td><%= bill.kind %></td>
-    <td><%= bill.value %></td>
-    <td><%= bill.expiration_date %></td>
-    <td><%= bill.pay_date %></td>
-    <td><%= bill.penalty %></td>
-    <td><%= bill.interest %></td>
-    <td><%= link_to 'Show', bill %></td>
-    <td><%= link_to 'Edit', edit_bill_path(bill) %></td>
-    <td><%= link_to 'Destroy', bill, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
+  </thead>
+  <tbody>
+    <% @bills.each do |bill| %>
+      <tr>
+        <td><%= bill.kind %></td>
+        <td><%= bill.value %></td>
+        <td><%= bill.expiration_date %></td>
+        <td><%= bill.pay_date %></td>
+        <td><%= bill.penalty %></td>
+        <td><%= bill.interest %></td>
+        <td><%= link_to 'Show', bill %></td>
+        <td><%= link_to 'Edit', edit_bill_path(bill) %></td>
+        <td><%= link_to 'Destroy', bill, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
 
 <br />

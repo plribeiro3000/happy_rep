@@ -11,17 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130611002204) do
+ActiveRecord::Schema.define(:version => 20130611020618) do
 
   create_table "bills", :force => true do |t|
     t.string   "kind"
     t.float    "value"
     t.date     "expiration_date"
-    t.date     "pay_date"
+    t.date     "payment_date"
     t.float    "penalty"
     t.float    "interest"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+    t.integer  "profile_id"
   end
 
   create_table "profiles", :force => true do |t|

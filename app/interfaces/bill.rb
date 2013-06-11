@@ -1,7 +1,9 @@
 class Bill < ActiveRecord::Base
-  attr_accessible :expiration_date, :interest, :kind, :pay_date, :penalty, :value
+  attr_accessible :expiration_date, :interest, :kind, :payment_date, :penalty, :value, :profile_id
 
-  validates_presence_of :expiration_date, :kind, :value
+  validates :expiration_date, :presence => true
+  validates :kind, :presence => true
+  validates :value, :presence => true
 
-  has_one :profile
+  belongs_to :profile
 end
