@@ -1,12 +1,11 @@
 HappyRep::Application.routes.draw do
   resources :books
 
+  resources :bills
 
-  devise_for :users
+  resources :users, :only => [ :index, :show, :destroy ]
 
-  namespace :admin do
-    resources :users, :only => [ :index, :show, :destroy ]
-  end
+  devise_for :users, :path => '/'
 
   root :to => "root#index"
 end
