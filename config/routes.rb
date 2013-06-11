@@ -1,4 +1,6 @@
 HappyRep::Application.routes.draw do
+  resources :books
+
   resources :bills
 
   resources :users, :only => [ :index, :show, :destroy ]
