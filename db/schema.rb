@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130611020618) do
+ActiveRecord::Schema.define(:version => 20130611025044) do
 
   create_table "bills", :force => true do |t|
     t.string   "kind"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(:version => 20130611020618) do
     t.integer  "edition"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "profile_id"
   end
 
   create_table "profiles", :force => true do |t|

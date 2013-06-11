@@ -1,7 +1,8 @@
 class Book < ActiveRecord::Base
-  attr_accessible :author, :edition, :name
+  attr_accessible :author, :edition, :name, :profile_id
 
-  validates_presence_of :author, :name
+  validates :author, :presence => true
+  validates :name, :presence => true
 
-  has_one :profile
+  belongs_to :profile
 end
