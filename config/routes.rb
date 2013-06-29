@@ -1,4 +1,7 @@
 HappyRep::Application.routes.draw do
+  resources :animals
+
+
   resources :events
 
   resources :books

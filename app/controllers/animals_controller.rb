@@ -1,0 +1,2 @@
+class AnimalsController < AuthorizedController
+end
