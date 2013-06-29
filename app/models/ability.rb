@@ -8,12 +8,12 @@ class Ability
 
     if profile_accessor.admin?
       can :manage, :animal
-      can :manage, :bill
+      can :manage, :bill, :profile_id => nil
+      can :manage, :bill, :profile_id => profile_accessor.id
       can :manage, :book
       can :manage, :employee
       can :manage, :event
       can :manage, :loan, :profile_id => profile_accessor.id
-      can :manage, :personal_bill, :profile => profile_accessor.id
       can :manage, :profile, :id => profile_accessor.id
       can [ :create, :destroy ], :profile, :role => %w(resident former aggregate)
       can :manage, :restitution
@@ -21,12 +21,12 @@ class Ability
       can :manage, :vacine
     elsif profile_accessor.resident?
       can :manage, :animal
-      can :manage, :bill
+      can [ :read, :create ], :bill, :profile_id => nil
+      can :manage, :bill, :profile_id => profile_accessor.id
       can :manage, :book
       can :manage, :employee
       can :manage, :event
       can :manage, :loan, :profile_id => profile_accessor.id
-      can :manage, :personal_bill, :profile => profile_accessor.id
       can :manage, :profile, :id => profile_accessor.id
       can [ :create, :destroy ], :profile, :role => %w(former aggregate)
       can :manage, :restitution
@@ -34,7 +34,6 @@ class Ability
       can :manage, :vacine
     elsif profile_accessor.former?
       can :manage, :loan, :profile_id => profile_accessor.id
-      can :manage, :personal_bill, :profile => profile_accessor.id
       can :manage, :profile, :id => profile_accessor.id
       can :manage, :user, :id => user.id
     elsif profile_accessor.aggregate?
