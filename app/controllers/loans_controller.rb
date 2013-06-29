@@ -1,2 +1,2 @@
-class LoansController < ApplicationController
+class LoansController < AuthorizedController
 end
