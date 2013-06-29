@@ -1,4 +1,10 @@
 HappyRep::Application.routes.draw do
+  resources :employees
+
+
+  resources :loans
+
+
   resources :events
 
   resources :books
