@@ -1,4 +1,7 @@
 HappyRep::Application.routes.draw do
+  resources :personal_bills
+
+
   resources :events
 
   resources :books
