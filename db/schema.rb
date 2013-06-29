@@ -34,6 +34,19 @@ ActiveRecord::Schema.define(:version => 20130629183053) do
     t.integer  "profile_id"
   end
 
+  create_table "employees", :force => true do |t|
+    t.string   "name"
+    t.string   "address"
+    t.integer  "work_card"
+    t.integer  "register"
+    t.date     "admission_date"
+    t.float    "salary"
+    t.string   "phone"
+    t.date     "demission_date"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
   create_table "events", :force => true do |t|
     t.string   "name"
     t.integer  "capacity"
@@ -41,6 +54,15 @@ ActiveRecord::Schema.define(:version => 20130629183053) do
     t.datetime "event_date"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "loans", :force => true do |t|
+    t.date     "realization_date"
+    t.float    "value"
+    t.string   "dweller"
+    t.date     "payment_date"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
   create_table "profiles", :force => true do |t|
