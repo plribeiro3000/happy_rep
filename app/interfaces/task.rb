@@ -1,4 +1,4 @@
-class PersonalTask < ActiveRecord::Base
+class Task < ActiveRecord::Base
   attr_accessible :description, :name, :start_date
 
   validates :name, :presence => true
