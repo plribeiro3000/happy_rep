@@ -1,5 +1,5 @@
 class Vacine < ActiveRecord::Base
   attr_accessible :event_date
 
-  has_one :animal
+  belongs_to :animal
 end

@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130611025044) do
+ActiveRecord::Schema.define(:version => 20130629195921) do
+
+  create_table "animals", :force => true do |t|
+    t.string   "name"
+    t.string   "species"
+    t.string   "race"
+    t.date     "birth_date"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "bills", :force => true do |t|
     t.string   "kind"
@@ -34,6 +43,19 @@ ActiveRecord::Schema.define(:version => 20130611025044) do
     t.integer  "profile_id"
   end
 
+  create_table "employees", :force => true do |t|
+    t.string   "name"
+    t.string   "address"
+    t.integer  "work_card"
+    t.integer  "register"
+    t.date     "admission_date"
+    t.float    "salary"
+    t.string   "phone"
+    t.date     "demission_date"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
   create_table "events", :force => true do |t|
     t.string   "name"
     t.integer  "capacity"
@@ -41,6 +63,15 @@ ActiveRecord::Schema.define(:version => 20130611025044) do
     t.datetime "event_date"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "loans", :force => true do |t|
+    t.date     "realization_date"
+    t.float    "value"
+    t.string   "dweller"
+    t.date     "payment_date"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
   create_table "profiles", :force => true do |t|
@@ -58,6 +89,16 @@ ActiveRecord::Schema.define(:version => 20130611025044) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "user_id"
+  end
+
+  create_table "restitutions", :force => true do |t|
+    t.string   "item"
+    t.date     "date"
+    t.string   "problem"
+    t.string   "solution"
+    t.float    "value"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|
@@ -81,5 +122,12 @@ ActiveRecord::Schema.define(:version => 20130611025044) do
   add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+
+  create_table "vacines", :force => true do |t|
+    t.date     "event_date"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "animal_id"
+  end
 
 end
