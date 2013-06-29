@@ -1,0 +1,2 @@
+class LoansController < AuthorizedController
+end

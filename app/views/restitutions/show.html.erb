@@ -1,0 +1,28 @@
+<p>
+  <b>Item:</b>
+  <%= @restitution.item %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @restitution.date %>
+</p>
+
+<p>
+  <b>Problem:</b>
+  <%= @restitution.problem %>
+</p>
+
+<p>
+  <b>Solution:</b>
+  <%= @restitution.solution %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%= @restitution.value %>
+</p>
+
+
+<%= link_to 'Edit', edit_restitution_path(@restitution) %> |
+<%= link_to 'Back', restitutions_path %>

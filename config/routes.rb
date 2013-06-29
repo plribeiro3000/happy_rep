@@ -1,6 +1,11 @@
 HappyRep::Application.routes.draw do
   resources :personal_bills
 
+  resources :employees
+
+  resources :loans
+
+  resources :restitutions
 
   resources :events
 
