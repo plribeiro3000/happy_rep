@@ -1,0 +1,2 @@
+class PersonalTasksController < AuthorizedController
+end
