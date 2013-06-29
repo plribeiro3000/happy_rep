@@ -1,0 +1,2 @@
+class RestitutionsController < AuthorizedController
+end

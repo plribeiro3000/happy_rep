@@ -1,4 +1,6 @@
 HappyRep::Application.routes.draw do
+  resources :restitutions
+
   resources :events
 
   resources :books
