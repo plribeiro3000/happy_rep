@@ -1,0 +1,29 @@
+<table>
+  <tr>
+    <th>Item</th>
+    <th>Date</th>
+    <th>Problem</th>
+    <th>Solution</th>
+    <th>Value</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @restitutions.each do |restitution| %>
+  <tr>
+    <td><%= restitution.item %></td>
+    <td><%= restitution.date %></td>
+    <td><%= restitution.problem %></td>
+    <td><%= restitution.solution %></td>
+    <td><%= restitution.value %></td>
+    <td><%= link_to 'Show', restitution %></td>
+    <td><%= link_to 'Edit', edit_restitution_path(restitution) %></td>
+    <td><%= link_to 'Destroy', restitution, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Restitution', new_restitution_path %>
