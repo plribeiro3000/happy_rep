@@ -74,6 +74,15 @@ ActiveRecord::Schema.define(:version => 20130629195921) do
     t.datetime "updated_at",       :null => false
   end
 
+  create_table "personal_bills", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.integer  "value"
+    t.date     "payment_date"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
   create_table "profiles", :force => true do |t|
     t.string   "name"
     t.date     "birthday"

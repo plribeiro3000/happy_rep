@@ -1,0 +1,27 @@
+<table>
+  <tr>
+    <th>Realization date</th>
+    <th>Value</th>
+    <th>Dweller</th>
+    <th>Payment date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @loans.each do |loan| %>
+  <tr>
+    <td><%= loan.realization_date %></td>
+    <td><%= loan.value %></td>
+    <td><%= loan.dweller %></td>
+    <td><%= loan.payment_date %></td>
+    <td><%= link_to 'Show', loan %></td>
+    <td><%= link_to 'Edit', edit_loan_path(loan) %></td>
+    <td><%= link_to 'Destroy', loan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Loan', new_loan_path %>

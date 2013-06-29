@@ -1,6 +1,13 @@
 HappyRep::Application.routes.draw do
   resources :animals
 
+  resources :personal_bills
+
+  resources :employees
+
+  resources :loans
+
+  resources :restitutions
 
   resources :events
 
