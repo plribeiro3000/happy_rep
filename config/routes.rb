@@ -1,10 +1,7 @@
 HappyRep::Application.routes.draw do
-  resources :personal_tasks
-
+  resources :tasks
 
   resources :animals
-
-  resources :personal_bills
 
   resources :employees
 
