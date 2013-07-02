@@ -7,4 +7,7 @@ class Employee < ActiveRecord::Base
   validates :admission_date, :presence => true
   validates :salary, :presence => true
   validates :work_card, :presence => true
+
+  scope :by_name, -> name { where(:name => name) if name.present? }
+  scope :by_admission_date, -> date { where(:admission_date => date) if date.present? }
 end
