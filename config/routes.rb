@@ -17,6 +17,8 @@ HappyRep::Application.routes.draw do
 
   resources :admins
 
+  resources :residents
+
   resources :users, :only => [ :index, :show, :destroy ]
 
   devise_for :users, :path => '/'

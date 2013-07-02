@@ -1,0 +1,29 @@
+<table>
+  <thead>
+  <tr>
+    <th>Nome</th>
+    <th>Aniversário</th>
+    <th>CPF</th>
+    <th>Telefone</th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @residents.each do |resident| %>
+      <tr>
+        <td><%= resident.profile.name %></td>
+        <td><%= resident.profile.birthday %></td>
+        <td><%= resident.profile.cpf %></td>
+        <td><%= resident.profile.phone %></td>
+        <td><%= link_to "Detalhar", resident_path(resident) %></td>
+        <td><%= link_to "Apagar", resident_path(resident), :data => { :confirm => "Você tem certeza?" }, :method => :delete %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'Novo Morador', new_resident_path %>

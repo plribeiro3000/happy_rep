@@ -1,0 +1,6 @@
+<%= form_for(@resident, :url => resident_path(@resident)) do |f| %>
+    <%= render :partial => 'form', :locals => { :f => f } %>
+<% end %>
+
+<%= link_to 'Show', @resident %> |
+<%= link_to 'Back', residents_path %>

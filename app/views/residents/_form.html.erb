@@ -1,0 +1,71 @@
+<% if @resident.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@resident.errors.count, "error") %> prohibited this resident from being saved:</h2>
+
+      <ul>
+        <% @resident.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>
+
+<% unless @resident.persisted? %>
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.text_field :email %>
+    </div>
+    <div class="field">
+      <%= f.label :password %><br />
+      <%= f.password_field :password %>
+    </div>
+    <div class="field">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation %>
+    </div>
+<% end %>
+<%= f.fields_for(:profile) do |p| %>
+    <div class="field">
+      <%= p.label :name %><br />
+      <%= p.text_field :name %>
+    </div>
+    <div class="field">
+      <%= p.label :birthday %><br />
+      <%= p.date_select :birthday %>
+    </div>
+    <div class="field">
+      <%= p.label :cpf %><br />
+      <%= p.text_field :cpf %>
+    </div>
+    <div class="field">
+      <%= p.label :college %><br />
+      <%= p.text_field :college %>
+    </div>
+    <div class="field">
+      <%= p.label :course %><br />
+      <%= p.text_field :course %>
+    </div>
+    <div class="field">
+      <%= p.label :admission %><br />
+      <%= p.date_select :admission %>
+    </div>
+    <div class="field">
+      <%= p.label :hometown %><br />
+      <%= p.text_field :hometown %>
+    </div>
+    <div class="field">
+      <%= p.label :bio %><br />
+      <%= p.text_area :bio %>
+    </div>
+    <div class="field">
+      <%= p.label :phone %><br />
+      <%= p.text_field :phone %>
+    </div>
+    <div class="field">
+      <%= p.label :address %><br />
+      <%= p.text_field :address %>
+    </div>
+<% end %>
+<div class="actions">
+  <%= f.submit %>
+</div>

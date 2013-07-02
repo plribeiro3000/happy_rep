@@ -1,0 +1,2 @@
+class ResidentsController < AuthorizedController
+end
