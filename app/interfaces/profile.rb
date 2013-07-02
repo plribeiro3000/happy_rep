@@ -1,5 +1,5 @@
 class Profile < ActiveRecord::Base
-  attr_accessible :address, :admission, :bio, :birthday, :college, :course, :cpf, :hometown, :name, :phone, :role
+  attr_accessible :address, :admission, :bio, :birthday, :college, :course, :cpf, :hometown, :name, :phone
 
   belongs_to :user
   has_many :books
