@@ -1,0 +1,2 @@
+class FormersController < ApplicationController
+end
