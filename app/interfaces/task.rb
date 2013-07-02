@@ -3,4 +3,7 @@ class Task < ActiveRecord::Base
 
   validates :name, :presence => true
   validates :description, :presence => true
+
+  scope :by_name, -> name { where(:name => name) if name.present? }
+  scope :by_start_date, -> date { where(:start_date => date) if date.present? }
 end
