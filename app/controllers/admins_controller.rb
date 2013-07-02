@@ -1,2 +1,2 @@
-class AdminsController < ApplicationController
+class AdminsController < AuthorizedController
 end
