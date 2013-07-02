@@ -7,4 +7,7 @@ class Animal < ActiveRecord::Base
   validate :race, :presence => true
   validate :species, :presence => true
   validate :birth_date, :presence => true
+
+  scope :by_name, -> name { where(:name => name) if name.present? }
+  scope :by_race, -> race { where(:race => race) if race.present? }
 end
