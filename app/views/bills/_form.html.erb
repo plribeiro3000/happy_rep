@@ -12,8 +12,12 @@
     <% end %>
 
     <div class="field">
+      <%= f.label :description %><br />
+      <%= f.text_field :description %>
+    </div>
+    <div class="field">
       <%= f.label :kind %><br />
-      <%= f.text_field :kind %>
+      <%= f.select :kind, options_for_select(Bill::KIND_OPTS) %>
     </div>
     <div class="field">
       <%= f.label :value %><br />

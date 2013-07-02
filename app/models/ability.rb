@@ -6,6 +6,7 @@ class Ability
     user_accessor = UserAccessor.new(user)
     profile_accessor = user_accessor.profile
 
+    can :manage, :all
     if profile_accessor.admin?
       can :manage, :animal
       can :manage, :bill, :profile_id => nil
