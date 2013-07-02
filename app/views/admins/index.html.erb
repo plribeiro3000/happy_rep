@@ -2,6 +2,9 @@
   <thead>
   <tr>
     <th>Nome</th>
+    <th>Aniversário</th>
+    <th>CPF</th>
+    <th>Telefone</th>
     <th></th>
     <th></th>
   </tr>
@@ -11,9 +14,16 @@
   <% @admins.each do |admin| %>
       <tr>
         <td><%= admin.profile.name %></td>
+        <td><%= admin.profile.birthday %></td>
+        <td><%= admin.profile.cpf %></td>
+        <td><%= admin.profile.phone %></td>
         <td><%= link_to "Detalhar", admin_path(admin) %></td>
-        <td><%= link_to "Apagar", admin, :data => { :confirm => "Você tem certeza?" }, :method => :delete %></td>
+        <td><%= link_to "Apagar", admin_path(admin), :data => { :confirm => "Você tem certeza?" }, :method => :delete %></td>
       </tr>
   <% end %>
   </tbody>
 </table>
+
+<br />
+
+<%= link_to 'Novo Admin', new_admin_path %>
