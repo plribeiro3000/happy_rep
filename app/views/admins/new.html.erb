@@ -1,0 +1,5 @@
+<%= form_for(@admin, :url => admins_path) do |f| %>
+    <%= render :partial => 'form', :locals => { :f => f } %>
+<% end %>
+
+<%= link_to 'Back', admins_path %>
