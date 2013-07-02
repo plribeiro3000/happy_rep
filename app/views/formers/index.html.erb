@@ -1,0 +1,29 @@
+<table>
+  <thead>
+  <tr>
+    <th>Nome</th>
+    <th>Aniversário</th>
+    <th>CPF</th>
+    <th>Telefone</th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @formers.each do |former| %>
+      <tr>
+        <td><%= former.profile.name %></td>
+        <td><%= former.profile.birthday %></td>
+        <td><%= former.profile.cpf %></td>
+        <td><%= former.profile.phone %></td>
+        <td><%= link_to "Detalhar", former_path(former) %></td>
+        <td><%= link_to "Apagar", former_path(former), :data => { :confirm => "Você tem certeza?" }, :method => :delete %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'Novo Ex-Morador', new_former_path %>
