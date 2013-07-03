@@ -1,0 +1,8 @@
+<p>No mês desta data, <%=l Date.today %>, foram reparados <%= @restitutions.count %> itens distintos. São eles: </p>
+<br>
+<% @restitutions.each do |restitution| %>
+    <%= restitution.item %> - Dia: <%=l restitution.date %> - Valor: R$<%= restitution.bill.value %>.
+    <br>
+<% end %>
+<br>
+<p>Os gastos totais foram de R$<%= @total %></p>
