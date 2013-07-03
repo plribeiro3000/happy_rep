@@ -1,37 +1,43 @@
 <%= form_for(@restitution) do |f| %>
-  <% if @restitution.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@restitution.errors.count, "error") %> prohibited this restitution from being saved:</h2>
+    <% if @restitution.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@restitution.errors.count, "error") %> prohibited this restitution from being saved:</h2>
 
-      <ul>
-      <% @restitution.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+          <ul>
+            <% @restitution.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :item %><br />
+      <%= f.text_field :item %>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :item %><br />
-    <%= f.text_field :item %>
-  </div>
-  <div class="field">
-    <%= f.label :date %><br />
-    <%= f.date_select :date %>
-  </div>
-  <div class="field">
-    <%= f.label :problem %><br />
-    <%= f.text_field :problem %>
-  </div>
-  <div class="field">
-    <%= f.label :solution %><br />
-    <%= f.text_field :solution %>
-  </div>
-  <div class="field">
-    <%= f.label :value %><br />
-    <%= f.text_field :value %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="field">
+      <%= f.label :date %><br />
+      <%= f.date_select :date %>
+    </div>
+    <div class="field">
+      <%= f.label :problem %><br />
+      <%= f.text_field :problem %>
+    </div>
+    <div class="field">
+      <%= f.label :solution %><br />
+      <%= f.text_field :solution %>
+    </div>
+    <%= f.fields_for(:bill) do |bill| %>
+        <div class="field">
+          <%= bill.label :description %><br />
+          <%= bill.text_field :description %>
+        </div>
+        <div class="field">
+          <%= bill.label :value %><br />
+          <%= bill.text_field :value %>
+        </div>
+    <% end %>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
 <% end %>
