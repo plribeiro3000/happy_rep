@@ -1,6 +1,6 @@
 <% if @admin.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@admin.errors.count, "error") %> prohibited this admin from being saved:</h2>
+      <h2><%= pluralize(@admin.errors.count, "error") %> não permitiram esse admin ser criado:</h2>
 
       <ul>
         <% @admin.errors.full_messages.each do |msg| %>
@@ -67,5 +67,5 @@
     </div>
 <% end %>
 <div class="actions">
-  <%= f.submit %>
+  <%= f.submit 'Criar Admin' %>
 </div>

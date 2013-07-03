@@ -1,7 +1,7 @@
 <%= form_for(@restitution) do |f| %>
     <% if @restitution.errors.any? %>
         <div id="error_explanation">
-          <h2><%= pluralize(@restitution.errors.count, "error") %> prohibited this restitution from being saved:</h2>
+          <h2><%= pluralize(@restitution.errors.count, "error") %> não permitiram esse reparo ser criado:</h2>
 
           <ul>
             <% @restitution.errors.full_messages.each do |msg| %>

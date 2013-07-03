@@ -1,6 +1,6 @@
 <% if @resident.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@resident.errors.count, "error") %> prohibited this resident from being saved:</h2>
+      <h2><%= pluralize(@resident.errors.count, "error") %> não permitiram esse morador ser criado:</h2>
 
       <ul>
         <% @resident.errors.full_messages.each do |msg| %>
