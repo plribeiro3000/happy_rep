@@ -28,7 +28,7 @@
   <% @aggregates.each do |aggregate| %>
       <tr>
         <td><%= aggregate.profile.name %></td>
-        <td><%= aggregate.profile.birthday %></td>
+        <td><%= l aggregate.profile.birthday %></td>
         <td><%= aggregate.profile.cpf %></td>
         <td><%= aggregate.profile.phone %></td>
         <td><%= link_to "Detalhar", aggregate_path(aggregate) %></td>

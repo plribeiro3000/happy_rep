@@ -1,6 +1,6 @@
 <p>
   <b>Data do empréstimo:</b>
-  <%= @loan.realization_date %>
+  <%= l @loan.realization_date %>
 </p>
 
 <p>
@@ -15,7 +15,7 @@
 
 <p>
   <b>Data do pagamento:</b>
-  <%= @loan.payment_date %>
+  <%= l @loan.payment_date if @loan.payment_date %>
 </p>
 
 

@@ -38,7 +38,7 @@
     <td><%= event.name %></td>
     <td><%= event.capacity %></td>
     <td><%= event.profit %></td>
-    <td><%= event.event_date %></td>
+    <td><%= l event.event_date if event.event_date %></td>
     <td><%= link_to 'Visualizar', event %></td>
     <td><%= link_to 'Editar', edit_event_path(event) %></td>
     <td><%= link_to 'Apagar', event, method: :delete, data: { confirm: 'Tem certeza?' } %></td>

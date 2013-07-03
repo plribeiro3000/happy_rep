@@ -43,8 +43,8 @@
         <td><%= bill.description %></td>
         <td><%= bill.kind %></td>
         <td><%= bill.value %></td>
-        <td><%= bill.expiration_date %></td>
-        <td><%= bill.payment_date %></td>
+        <td><%= l bill.expiration_date %></td>
+        <td><%= l bill.payment_date if bill.payment_date %></td>
         <td><%= bill.penalty %></td>
         <td><%= bill.interest %></td>
         <td><%= link_to 'Visualizar', bill %></td>

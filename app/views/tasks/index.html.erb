@@ -36,7 +36,7 @@
   <tr>
     <td><%= task.name %></td>
     <td><%= task.description %></td>
-    <td><%= task.start_date %></td>
+    <td><%= l task.start_date if task.start_date %></td>
     <td><%= link_to 'Visualizar', task %></td>
     <td><%= link_to 'Editar', edit_task_path(task) %></td>
     <td><%= link_to 'Apagar', task, method: :delete, data: { confirm: 'Tem certeza?' } %></td>

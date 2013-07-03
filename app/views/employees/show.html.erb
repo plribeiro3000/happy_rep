@@ -20,7 +20,7 @@
 
 <p>
   <b>Data de Admissão:</b>
-  <%= @employee.admission_date %>
+  <%= l @employee.admission_date %>
 </p>
 
 <p>
@@ -35,7 +35,7 @@
 
 <p>
   <b>Data de Demissão:</b>
-  <%= @employee.demission_date %>
+  <%= l @employee.demission_date if @employee.demission_date %>
 </p>
 
 

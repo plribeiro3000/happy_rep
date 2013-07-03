@@ -4,7 +4,7 @@
 </p>
 <p>
   <b>Aniversário:</b>
-  <%= @former.profile.birthday %>
+  <%= l @former.profile.birthday %>
 </p>
 <p>
   <b>CPF:</b>
@@ -20,7 +20,7 @@
 </p>
 <p>
   <b>Ano de Ingresso:</b>
-  <%= @former.profile.admission %>
+  <%= l @former.profile.admission if @former.profile.admission %>
 </p>
 <p>
   <b>Cidade Natal:</b>

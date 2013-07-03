@@ -28,7 +28,7 @@
   <% @residents.each do |resident| %>
       <tr>
         <td><%= resident.profile.name %></td>
-        <td><%= resident.profile.birthday %></td>
+        <td><%= l resident.profile.birthday %></td>
         <td><%= resident.profile.cpf %></td>
         <td><%= resident.profile.phone %></td>
         <td><%= link_to "Detalhar", resident_path(resident) %></td>

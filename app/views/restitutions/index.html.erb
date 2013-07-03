@@ -37,7 +37,7 @@
 <% @restitutions.each do |restitution| %>
   <tr>
     <td><%= restitution.item %></td>
-    <td><%= restitution.date %></td>
+    <td><%= l restitution.date %></td>
     <td><%= restitution.problem %></td>
     <td><%= restitution.solution %></td>
     <td><%= restitution.bill.value %></td>
