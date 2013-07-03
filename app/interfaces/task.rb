@@ -1,6 +1,8 @@
 class Task < ActiveRecord::Base
   attr_accessible :description, :name, :start_date
 
+  belongs_to :profile
+
   validates :name, :presence => true
   validates :description, :presence => true
 

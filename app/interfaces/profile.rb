@@ -4,6 +4,7 @@ class Profile < ActiveRecord::Base
   belongs_to :user
   has_many :books
   has_many :bills
+  has_many :tasks
 
   validates :name, :presence => true
   validates :birthday, :presence => true
