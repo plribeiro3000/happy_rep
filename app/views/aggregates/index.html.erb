@@ -1,0 +1,29 @@
+<table>
+  <thead>
+  <tr>
+    <th>Nome</th>
+    <th>Aniversário</th>
+    <th>CPF</th>
+    <th>Telefone</th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @aggregates.each do |aggregate| %>
+      <tr>
+        <td><%= aggregate.profile.name %></td>
+        <td><%= aggregate.profile.birthday %></td>
+        <td><%= aggregate.profile.cpf %></td>
+        <td><%= aggregate.profile.phone %></td>
+        <td><%= link_to "Detalhar", aggregate_path(aggregate) %></td>
+        <td><%= link_to "Apagar", aggregate_path(aggregate), :data => { :confirm => "Você tem certeza?" }, :method => :delete %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'Novo Agregado', new_aggregate_path %>
