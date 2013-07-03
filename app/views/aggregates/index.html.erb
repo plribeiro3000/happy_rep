@@ -15,7 +15,6 @@
 
 
 <table class="table table-striped">
-  <thead>
   <tr>
     <th>Nome</th>
     <th>Aniversário</th>
@@ -24,9 +23,8 @@
     <th></th>
     <th></th>
   </tr>
-  </thead>
 
-  <tbody>
+
   <% @aggregates.each do |aggregate| %>
       <tr>
         <td><%= aggregate.profile.name %></td>
@@ -37,7 +35,6 @@
         <td><%= link_to "Apagar", aggregate_path(aggregate), :data => { :confirm => "Você tem certeza?" }, :method => :delete %></td>
       </tr>
   <% end %>
-  </tbody>
 </table>
 
 <br />

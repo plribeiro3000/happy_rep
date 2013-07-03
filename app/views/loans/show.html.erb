@@ -1,23 +1,23 @@
 <p>
-  <b>Realization date:</b>
+  <b>Data do empréstimo:</b>
   <%= @loan.realization_date %>
 </p>
 
 <p>
-  <b>Value:</b>
+  <b>Valor:</b>
   <%= @loan.value %>
 </p>
 
 <p>
-  <b>Dweller:</b>
+  <b>Devedor:</b>
   <%= @loan.dweller %>
 </p>
 
 <p>
-  <b>Payment date:</b>
+  <b>Data do pagamento:</b>
   <%= @loan.payment_date %>
 </p>
 
 
-<%= link_to 'Edit', edit_loan_path(@loan) %> |
-<%= link_to 'Back', loans_path %>
+<%= link_to 'Editar', edit_loan_path(@loan) %> |
+<%= link_to 'Voltar', loans_path %>
