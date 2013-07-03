@@ -40,7 +40,7 @@
     <td><%= restitution.date %></td>
     <td><%= restitution.problem %></td>
     <td><%= restitution.solution %></td>
-    <td><%= restitution.value %></td>
+    <td><%= restitution.bill.value %></td>
     <td><%= link_to 'Visualizar', restitution %></td>
     <td><%= link_to 'Editar', edit_restitution_path(restitution) %></td>
     <td><%= link_to 'Apagar', restitution, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
