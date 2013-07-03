@@ -1,4 +1,4 @@
-<p>No mes desta data <%=l Date.today %> foram pagas <%= @bills.count %> contas distintas. Sao elas: </p>
+<p>No mes desta data, <%=l Date.today %>, foram pagas <%= @bills.count %> contas distintas. Sao elas: </p>
 <br>
 <% @bills.each do |bill| %>
     <%= bill.description %> - Vencimento: <%=l bill.expiration_date %> - Valor: R$<%= bill.value %>.

@@ -5,6 +5,5 @@ class ReportController < AuthorizedController
 
   def expenses
     @bills, @total = report_expenses
-    binding.pry
   end
 end
