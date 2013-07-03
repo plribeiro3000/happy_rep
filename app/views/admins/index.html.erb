@@ -1,5 +1,21 @@
-<table>
-  <thead>
+<%= form_tag(admins_path, :method => "get") do %>
+    <div class="container-fluid">
+      <div class="row-fluid" >
+        <div class="span3">
+          Nome:
+        </div>
+        <div class="span3 row-form">
+          <input type="text" id="name" name="name" />
+        </div>
+      </div>
+    </div>
+    <%= button_tag("Consultar") %>
+
+<% end %>
+
+
+<table class="table table-striped">
+<thead>
   <tr>
     <th>Nome</th>
     <th>Aniversário</th>
