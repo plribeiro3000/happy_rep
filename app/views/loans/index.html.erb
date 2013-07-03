@@ -35,10 +35,10 @@
 
 <% @loans.each do |loan| %>
   <tr>
-    <td><%= loan.realization_date %></td>
+    <td><%= l loan.realization_date %></td>
     <td><%= loan.value %></td>
     <td><%= loan.dweller %></td>
-    <td><%= loan.payment_date %></td>
+    <td><%= l loan.payment_date if loan.payment_date %></td>
     <td><%= link_to 'Visualizar', loan %></td>
     <td><%= link_to 'Editar', edit_loan_path(loan) %></td>
     <td><%= link_to 'Apagar', loan, method: :delete, data: { confirm: 'Tem certeza?' } %></td>

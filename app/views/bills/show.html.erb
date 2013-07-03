@@ -15,12 +15,12 @@
 
 <p>
   <b>Data de Vencimento:</b>
-  <%= @bill.expiration_date %>
+  <%= l @bill.expiration_date %>
 </p>
 
 <p>
   <b>Data de Pagamento:</b>
-  <%= @bill.payment_date %>
+  <%= l @bill.payment_date if @bill.payment_date %>
 </p>
 
 <p>

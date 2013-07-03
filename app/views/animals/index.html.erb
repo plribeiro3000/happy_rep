@@ -38,7 +38,7 @@
     <td><%= animal.name %></td>
     <td><%= animal.species %></td>
     <td><%= animal.race %></td>
-    <td><%= animal.birth_date %></td>
+    <td><%= l animal.birth_date %></td>
     <td><%= link_to 'Visualizar', animal %></td>
     <td><%= link_to 'Editar', edit_animal_path(animal) %></td>
     <td><%= link_to 'Apagar', animal, method: :delete, data: { confirm: 'Tem certeza?' } %></td>

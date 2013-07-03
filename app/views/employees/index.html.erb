@@ -43,10 +43,10 @@
     <td><%= employee.address %></td>
     <td><%= employee.work_card %></td>
     <td><%= employee.register %></td>
-    <td><%= employee.admission_date %></td>
+    <td><%= l employee.admission_date %></td>
     <td><%= employee.salary %></td>
     <td><%= employee.phone %></td>
-    <td><%= employee.demission_date %></td>
+    <td><%= l employee.demission_date if employee.demission_date %></td>
     <td><%= link_to 'Visualizar', employee %></td>
     <td><%= link_to 'Editar', edit_employee_path(employee) %></td>
     <td><%= link_to 'Apagar', employee, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
