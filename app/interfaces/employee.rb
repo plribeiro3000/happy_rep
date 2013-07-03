@@ -9,5 +9,5 @@ class Employee < ActiveRecord::Base
   validates :work_card, :presence => true
 
   scope :by_name, -> name { where(:name => name) if name.present? }
-  scope :by_admission_date, -> date { where(:admission_date => date) if date.present? }
+  scope :by_admission_date, -> date { where(:admission_date => date.to_date) if date.present? }
 end

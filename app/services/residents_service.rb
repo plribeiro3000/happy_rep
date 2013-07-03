@@ -21,19 +21,19 @@ module ResidentsService
     resident = User.new(attributes)
     resident.profile.role = 'resident'
     resident.save
-    { :resident => resident, :responder => 'resident' }
+    { :resident => resident, :location => residents_path }
   end
 
   def modify(id, attributes = {})
     resident = self.find(id)[:resident]
     resident.update_attributes(attributes)
-    { :resident => resident, :responder => 'resident' }
+    { :resident => resident, :location => residents_path }
   end
 
   def delete(id)
     resident = self.find(id)[:resident]
     resident.destroy
-    { :resident => resident, :responder => 'resident' }
+    { :resident => resident, :location => residents_path }
   end
 
   protected

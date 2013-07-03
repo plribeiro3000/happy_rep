@@ -1,6 +1,6 @@
 <% if @former.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@former.errors.count, "error") %> prohibited this former from being saved:</h2>
+      <h2><%= pluralize(@former.errors.count, "error") %> não permitiram esse ex-morador ser criado:</h2>
 
       <ul>
         <% @former.errors.full_messages.each do |msg| %>
@@ -67,5 +67,5 @@
     </div>
 <% end %>
 <div class="actions">
-  <%= f.submit %>
+  <%= f.submit 'Criar Ex-Morador' %>
 </div>
