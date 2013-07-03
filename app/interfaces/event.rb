@@ -6,5 +6,5 @@ class Event < ActiveRecord::Base
   validates :profit, :presence => true
 
   scope :by_name, -> name { where(:name => name) if name.present? }
-  scope :by_event_date, -> date { where(:event_date => date) if date.present? }
+  scope :by_event_date, -> date { where(:event_date => date.to_date) if date.present? }
 end

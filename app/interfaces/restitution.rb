@@ -9,5 +9,5 @@ class Restitution < ActiveRecord::Base
   accepts_nested_attributes_for :bill
 
   scope :by_item, -> item { where(:item => item) if item.present? }
-  scope :by_date, -> date { where(:date => date) if date.present? }
+  scope :by_date, -> date { where(:date => date.to_date) if date.present? }
 end
