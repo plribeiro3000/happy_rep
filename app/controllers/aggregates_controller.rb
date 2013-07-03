@@ -1,0 +1,2 @@
+class AggregatesController < AuthorizedController
+end
