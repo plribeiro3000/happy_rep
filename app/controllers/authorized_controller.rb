@@ -3,6 +3,6 @@ class AuthorizedController < ApplicationController
   authorize_resource(User)
 
   rescue_from CanCan::AccessDenied do |exception|
-    redirect_to new_user_session_url, :alert => exception.message
+    redirect_to root_url, :alert => exception.message
   end
 end

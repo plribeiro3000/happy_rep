@@ -6,41 +6,45 @@ class Ability
     user_accessor = UserAccessor.new(user)
     profile_accessor = user_accessor.profile
 
-    can :manage, :all
     if profile_accessor.admin?
-      can :manage, :animal
-      can :manage, :bill, :profile_id => nil
-      can :manage, :bill, :profile_id => profile_accessor.id
-      can :manage, :book
-      can :manage, :employee
-      can :manage, :event
-      can :manage, :loan, :profile_id => profile_accessor.id
-      can :manage, :profile, :id => profile_accessor.id
-      can [ :create, :destroy ], :profile, :role => %w(resident former aggregate)
-      can :manage, :restitution
-      can :manage, :user, :id => user.id
-      can :manage, :vacine
+      can :manage, Animal
+      can :manage, Bill, :profile_id => nil
+      can :manage, Bill, :profile_id => profile_accessor.id
+      can :manage, Book
+      can :manage, Employee
+      can :manage, Event
+      can :manage, Loan, :profile_id => profile_accessor.id
+      can :manage, Profile
+      can :manage, Restitution
+      can :manage, Task, :profile_id => profile_accessor.id
+      can :manage, User
+      can :manage, Vacine
     elsif profile_accessor.resident?
-      can :manage, :animal
-      can [ :read, :create ], :bill, :profile_id => nil
-      can :manage, :bill, :profile_id => profile_accessor.id
-      can :manage, :book
-      can :manage, :employee
-      can :manage, :event
-      can :manage, :loan, :profile_id => profile_accessor.id
-      can :manage, :profile, :id => profile_accessor.id
-      can [ :create, :destroy ], :profile, :role => %w(former aggregate)
-      can :manage, :restitution
-      can :manage, :user, :id => user.id
-      can :manage, :vacine
+      can :manage, Animal
+      can [ :read, :create ], Bill, :profile_id => nil
+      can :manage, Bill, :profile_id => profile_accessor.id
+      can :manage, Book
+      can [ :read ], Employee
+      can [ :read, :create ], Event
+      can :manage, Loan, :profile_id => profile_accessor.id
+      can :read, Profile
+      can :manage, Profile, :id => profile_accessor.id
+      can [ :read, :create ], Restitution
+      can :manage, Task, :profile_id => profile_accessor.id
+      can :read, User
+      can :manage, User, :id => user.id
+      can [ :read, :create ], Vacine
     elsif profile_accessor.former?
-      can :manage, :loan, :profile_id => profile_accessor.id
-      can :manage, :profile, :id => profile_accessor.id
-      can :manage, :user, :id => user.id
+      can :read, :all
+      can :manage, Loan, :profile_id => profile_accessor.id
+      can :manage, Profile, :id => profile_accessor.id
+      can :manage, User, :id => user.id
     elsif profile_accessor.aggregate?
       can :read, :event
-      can :manage, :profile, :id => profile_accessor.id
-      can :manage, :user, :id => user.id
+      can :read, User
+      can :read, Profile
+      can :manage, Profile, :id => profile_accessor.id
+      can :manage, User, :id => user.id
     end
   end
 end
