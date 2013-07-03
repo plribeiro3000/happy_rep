@@ -1,0 +1,6 @@
+<%= form_for(@aggregate, :url => aggregate_path(@aggregate)) do |f| %>
+    <%= render :partial => 'form', :locals => { :f => f } %>
+<% end %>
+
+<%= link_to 'Show', @aggregate %> |
+<%= link_to 'Back', aggregates_path %>
