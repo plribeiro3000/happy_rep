@@ -1,5 +1,5 @@
 <p>
-  <b>Name:</b>
+  <b>Nome:</b>
   <%= @resident.profile.name %>
 </p>
 <p>
@@ -38,3 +38,6 @@
   <b>Endereço:</b>
   <%= @resident.profile.address %>
 </p>
+
+<%= link_to 'Editar', edit_resident_path(@resident) %> |
+<%= link_to 'Voltar', residents_path %>

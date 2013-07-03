@@ -1,18 +1,18 @@
 <p>
-  <b>Name:</b>
+  <b>Nome:</b>
   <%= @task.name %>
 </p>
 
 <p>
-  <b>Description:</b>
+  <b>Descrição:</b>
   <%= @task.description %>
 </p>
 
 <p>
-  <b>Start date:</b>
+  <b>Data de Início:</b>
   <%= @task.start_date %>
 </p>
 
 
-<%= link_to 'Edit', edit_task_path(@task) %> |
-<%= link_to 'Back', tasks_path %>
+<%= link_to 'Editar', edit_task_path(@task) %> |
+<%= link_to 'Voltar', tasks_path %>

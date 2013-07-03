@@ -1,5 +1,5 @@
 <p>
-  <b>Name:</b>
+  <b>Nome:</b>
   <%= @former.profile.name %>
 </p>
 <p>
@@ -38,3 +38,6 @@
   <b>Endereço:</b>
   <%= @former.profile.address %>
 </p>
+
+<%= link_to 'Editar', edit_former_path(@former) %> |
+<%= link_to 'Voltar', formers_path %>
