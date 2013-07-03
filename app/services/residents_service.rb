@@ -1,4 +1,4 @@
-module AdminsService
+module ResidentsService
   def advanced_search(name)
     if name.present?
       return User.joins(:profile).where('profiles.role' => 'resident', 'profiles.name' => name)
