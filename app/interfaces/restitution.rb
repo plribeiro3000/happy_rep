@@ -10,4 +10,5 @@ class Restitution < ActiveRecord::Base
 
   scope :by_item, -> item { where(:item => item) if item.present? }
   scope :by_date, -> date { where(:date => date.to_date) if date.present? }
+  scope :this_month, ->{ where("date > ? and date < ?", Date.today.beginning_of_month, Date.today.end_of_month) }
 end

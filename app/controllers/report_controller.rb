@@ -6,4 +6,8 @@ class ReportController < AuthorizedController
   def expenses
     @bills, @total = report_expenses
   end
+
+  def restitutions
+    @restitutions, @total = report_restitutions
+  end
 end

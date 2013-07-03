@@ -16,4 +16,13 @@ module ReportService
     end
     [bills, total]
   end
+
+  def report_restitutions
+    total = 0
+    restitutions = Restitution.this_month
+    restitutions.each do |restitution|
+      total += restitution.bill.value
+    end
+    [restitutions, total]
+  end
 end
