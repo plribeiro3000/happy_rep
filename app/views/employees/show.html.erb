@@ -1,68 +1,43 @@
 <p>
-  <b>Name:</b>
+  <b>Nome:</b>
   <%= @employee.name %>
 </p>
 
 <p>
-  <b>Address:</b>
+  <b>Endereço:</b>
   <%= @employee.address %>
 </p>
 
 <p>
-  <b>Birth date:</b>
-  <%= @employee.birth_date %>
-</p>
-
-<p>
-  <b>Work card:</b>
+  <b>Carteira de Trabalho:</b>
   <%= @employee.work_card %>
 </p>
 
 <p>
-  <b>Functions:</b>
-  <%= @employee.functions %>
-</p>
-
-<p>
-  <b>Register:</b>
+  <b>CPF:</b>
   <%= @employee.register %>
 </p>
 
 <p>
-  <b>Experience:</b>
-  <%= @employee.experience %>
-</p>
-
-<p>
-  <b>Admission date:</b>
+  <b>Data de Admissão:</b>
   <%= @employee.admission_date %>
 </p>
 
 <p>
-  <b>Salary:</b>
+  <b>Salário:</b>
   <%= @employee.salary %>
 </p>
 
 <p>
-  <b>Photo:</b>
-  <%= @employee.photo %>
-</p>
-
-<p>
-  <b>About:</b>
-  <%= @employee.about %>
-</p>
-
-<p>
-  <b>Phone:</b>
+  <b>Telefone:</b>
   <%= @employee.phone %>
 </p>
 
 <p>
-  <b>Demission date:</b>
+  <b>Data de Demissão:</b>
   <%= @employee.demission_date %>
 </p>
 
 
-<%= link_to 'Edit', edit_employee_path(@employee) %> |
-<%= link_to 'Back', employees_path %>
+<%= link_to 'Editar', edit_employee_path(@employee) %> |
+<%= link_to 'Voltar', employees_path %>

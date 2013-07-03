@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="row-fluid" >
       <div class="span3">
-        Data de Vencimento
+        Data de Vencimento:
       </div>
       <div class="span3 row-form">
         <input type="text" id="expiration_date" name="expiration_date" placeholder="Exemplo: 01/01/1992" />
@@ -10,7 +10,7 @@
     </div>
     <div class="row-fluid" >
       <div class="span3">
-        Data de Pagamento
+        Data de Pagamento:
       </div>
       <div class="span3 row-form">
         <input type="text" id="payment_date" name="payment_date" placeholder="Exemplo: 01/01/1992" />
@@ -25,12 +25,13 @@
 <table class="table table-striped">
   <thead>
   <tr>
-    <th>Kind</th>
-    <th>Value</th>
-    <th>Expiration date</th>
-    <th>Pay date</th>
-    <th>Penalty</th>
-    <th>Interest</th>
+    <th>Descrição</th>
+    <th>Tipo</th>
+    <th>Valor</th>
+    <th>Data de Vencimento</th>
+    <th>Data de Pagamento</th>
+    <th>Multa</th>
+    <th>Juros</th>
     <th></th>
     <th></th>
     <th></th>
@@ -39,15 +40,16 @@
   <tbody>
     <% @bills.each do |bill| %>
       <tr>
+        <td><%= bill.description %></td>
         <td><%= bill.kind %></td>
         <td><%= bill.value %></td>
         <td><%= bill.expiration_date %></td>
         <td><%= bill.payment_date %></td>
         <td><%= bill.penalty %></td>
         <td><%= bill.interest %></td>
-        <td><%= link_to 'Show', bill %></td>
-        <td><%= link_to 'Edit', edit_bill_path(bill) %></td>
-        <td><%= link_to 'Destroy', bill, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Visualizar', bill %></td>
+        <td><%= link_to 'Editar', edit_bill_path(bill) %></td>
+        <td><%= link_to 'Apagar', bill, method: :delete, data: { confirm: 'Tem certeza disso?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -55,4 +57,4 @@
 
 <br />
 
-<%= link_to 'New Bill', new_bill_path %>
+<%= link_to 'Nova conta', new_bill_path %>

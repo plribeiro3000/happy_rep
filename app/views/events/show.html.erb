@@ -1,23 +1,23 @@
 <p>
-  <b>Name:</b>
+  <b>Nome:</b>
   <%= @event.name %>
 </p>
 
 <p>
-  <b>Capacity:</b>
+  <b>Capacidade:</b>
   <%= @event.capacity %>
 </p>
 
 <p>
-  <b>Profit:</b>
+  <b>Lucro:</b>
   <%= @event.profit %>
 </p>
 
 <p>
-  <b>Event date:</b>
+  <b>Data:</b>
   <%= @event.event_date %>
 </p>
 
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<%= link_to 'Editar', edit_event_path(@event) %> |
+<%= link_to 'Voltar', events_path %>
