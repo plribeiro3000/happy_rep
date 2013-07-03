@@ -1,7 +1,7 @@
 class Restitution < ActiveRecord::Base
   attr_accessible :date, :item, :problem, :solution, :value, :bill_attributes
 
-  has_one :bill
+  has_one :bill, :dependent => :destroy
 
   validates :item, :presence => true
   validates :date, :presence => true
