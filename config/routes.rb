@@ -30,4 +30,6 @@ HappyRep::Application.routes.draw do
   get 'event_report' => 'report#events'
 
   get 'expense_report' => 'report#expenses'
+
+  get 'restitution_report' => 'report#restitutions'
 end
