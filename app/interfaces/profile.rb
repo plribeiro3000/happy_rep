@@ -5,6 +5,7 @@ class Profile < ActiveRecord::Base
   has_many :books
   has_many :bills
   has_many :tasks
+  has_many :loans
 
   validates :name, :presence => true
   validates :birthday, :presence => true
