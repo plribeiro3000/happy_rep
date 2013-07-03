@@ -1,2 +1,0 @@
-class PersonalBillsController < AuthorizedController
-end
