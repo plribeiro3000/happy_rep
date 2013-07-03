@@ -3,6 +3,7 @@ class Event < ActiveRecord::Base
 
   validates :capacity, :presence => true
   validates :name, :presence => true
+  validates :profit, :presence => true
 
   scope :by_name, -> name { where(:name => name) if name.present? }
   scope :by_event_date, -> date { where(:event_date => date) if date.present? }
