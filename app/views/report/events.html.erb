@@ -1,4 +1,4 @@
-<p>No mes desta data, <%=l Date.today %>, foram realizados <%= @events.count %> eventos distintos. Sao eles: </p>
+<p>No mês desta data, <%=l Date.today %>, foram realizados <%= @events.count %> eventos distintos. São eles: </p>
 <br>
 <% @events.each do |event| %>
     <%= event.name %> - <%=l event.event_date %> e com renda igual a R$ <%= event.profit %>.
