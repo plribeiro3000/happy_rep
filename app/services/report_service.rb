@@ -7,4 +7,13 @@ module ReportService
     end
     [events, profit]
   end
+
+  def report_expenses
+    total = 0
+    bills = Bill.where(:profile_id => nil).this_month
+    bills.each do |bill|
+      total += bill.value
+    end
+    [bills, total]
+  end
 end

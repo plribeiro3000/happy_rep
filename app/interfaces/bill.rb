@@ -13,4 +13,5 @@ class Bill < ActiveRecord::Base
 
   scope :by_expiration_date, -> date { where(:expiration_date => date) if date.present? }
   scope :by_payment_date, -> date { where(:payment_date => date) if date.present? }
+  scope :this_month, ->{ where("expiration_date > ? and expiration_date < ?", Date.today.beginning_of_month, Date.today.end_of_month) }
 end
