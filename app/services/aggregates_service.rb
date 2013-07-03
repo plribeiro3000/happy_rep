@@ -21,19 +21,19 @@ module AggregatesService
     aggregate = User.new(attributes)
     aggregate.profile.role = 'aggregate'
     aggregate.save
-    { :aggregate => aggregate }
+    { :aggregate => aggregate, :responder => 'aggregate' }
   end
 
   def modify(id, attributes = {})
     aggregate = self.find(id)[:aggregate]
     aggregate.update_attributes(attributes)
-    { :aggregate => aggregate }
+    { :aggregate => aggregate, :responder => 'aggregate' }
   end
 
   def delete(id)
     aggregate = self.find(id)[:aggregate]
     aggregate.destroy
-    { :aggregate => aggregate }
+    { :aggregate => aggregate, :responder => 'aggregate' }
   end
 
   protected

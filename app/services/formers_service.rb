@@ -21,19 +21,19 @@ module FormersService
     former = User.new(attributes)
     former.profile.role = 'former'
     former.save
-    { :former => former }
+    { :former => former, :responder => 'former' }
   end
 
   def modify(id, attributes = {})
     former = self.find(id)[:former]
     former.update_attributes(attributes)
-    { :former => former }
+    { :former => former, :responder => 'former' }
   end
 
   def delete(id)
     former = self.find(id)[:former]
     former.destroy
-    { :former => former }
+    { :former => former, :responder => 'former' }
   end
 
   protected

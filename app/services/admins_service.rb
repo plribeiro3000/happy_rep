@@ -21,19 +21,19 @@ module AdminsService
     admin = User.new(attributes)
     admin.profile.role = 'admin'
     admin.save
-    { :admin => admin }
+    { :admin => admin, :responder => 'admin' }
   end
 
   def modify(id, attributes = {})
     admin = self.find(id)[:admin]
     admin.update_attributes(attributes)
-    { :admin => admin }
+    { :admin => admin, :responder => 'admin' }
   end
 
   def delete(id)
     admin = self.find(id)[:admin]
     admin.destroy
-    { :admin => admin }
+    { :admin => admin, :responder => 'admin' }
   end
 
   protected
