@@ -28,4 +28,6 @@ HappyRep::Application.routes.draw do
   root :to => "root#index"
 
   get 'event_report' => 'report#events'
+
+  get 'expense_report' => 'report#expenses'
 end
