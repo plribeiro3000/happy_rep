@@ -1,0 +1,17 @@
+#! encoding: utf-8
+br:
+  activerecord:
+    models:
+      profile: "Perfil"
+    attributes:
+      profile:
+        name: "Nome"
+        birthday: "Data de Nascimento"
+        cpf: "CPF"
+        college: "Faculdade"
+        course: "Curso"
+        admission: "Ano de Ingresso"
+        hometown: "Cidade Natal"
+        bio: "Descrição"
+        phone: "Telefone"
+        address: "Endereço"

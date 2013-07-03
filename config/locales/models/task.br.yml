@@ -1,0 +1,10 @@
+#! encoding: utf-8
+br:
+  activerecord:
+    models:
+      task: "Tarefa"
+    attributes:
+      task:
+        name: "Nome"
+        description: "Descrição"
+        start_date: "Data de Início"

@@ -1,0 +1,8 @@
+#! encoding: utf-8
+br:
+  activerecord:
+    models:
+      vacine: "Vacina"
+    attributes:
+      vacine:
+        event_date: "Data de Vacinação"

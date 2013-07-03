@@ -1,0 +1,11 @@
+#! encoding: utf-8
+br:
+  activerecord:
+    models:
+      animal: "Animal"
+    attributes:
+      animal:
+        name: "Nome"
+        species: "Espécie"
+        race: "Raça"
+        birth_date: "Data de Nascimento"

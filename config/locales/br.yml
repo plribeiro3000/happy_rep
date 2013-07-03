@@ -4,7 +4,6 @@ br:
   completed: "completado"
   approved: "aprovado"
   canceled: "cancelado"
-
   date:
     abbr_day_names:
     - Dom

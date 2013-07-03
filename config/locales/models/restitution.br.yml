@@ -1,0 +1,12 @@
+#! encoding: utf-8
+br:
+  activerecord:
+    models:
+      restitution: "Reparo"
+    attributes:
+      restitution:
+        item: "Item"
+        date: "Data do Reparo"
+        problem: "Problema"
+        solution: "Solução"
+        value: "Valor"

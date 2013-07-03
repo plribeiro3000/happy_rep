@@ -1,0 +1,15 @@
+#! encoding: utf-8
+br:
+  activerecord:
+    models:
+      employee: "Empregado"
+    attributes:
+      employee:
+        name: "Nome"
+        address: "Endereço"
+        work_card: "Carteira de Trabalho"
+        register: "CPF"
+        admission_date: "Data de Admissão"
+        salary: "Salário"
+        phone: "Telefone"
+        demission_date: "Data de Demissão"

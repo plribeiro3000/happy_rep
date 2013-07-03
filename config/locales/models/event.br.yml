@@ -1,0 +1,11 @@
+#! encoding: utf-8
+br:
+  activerecord:
+    models:
+      event: "Evento"
+    attributes:
+      event:
+        name: "Nome"
+        capacity: "Capacidade"
+        profit: "Lucro"
+        event_date: "Data"

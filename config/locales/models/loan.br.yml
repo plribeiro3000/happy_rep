@@ -1,0 +1,11 @@
+#! encoding: utf-8
+br:
+  activerecord:
+    models:
+      loan: "Empréstimo"
+    attributes:
+      loan:
+        realization_date: "Data do empréstimo"
+        value: "Valor"
+        dweller: "Devedor"
+        payment_date: "Data do pagamento"

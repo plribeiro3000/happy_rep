@@ -1,0 +1,10 @@
+#! encoding: utf-8
+br:
+  activerecord:
+    models:
+      book: "Livro"
+    attributes:
+      book:
+        name: "Nome"
+        author: "Autor"
+        edition: "Edição"
