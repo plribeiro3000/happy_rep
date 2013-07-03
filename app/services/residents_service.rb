@@ -1,6 +1,10 @@
 module AdminsService
-  def all
-    { :residents => User.joins(:profile).where('profiles.role' => 'resident') }
+  def advanced_search(name)
+    if name.present?
+      return User.joins(:profile).where('profiles.role' => 'resident', 'profiles.name' => name)
+    else
+      return User.joins(:profile).where('profiles.role' => 'resident')
+    end
   end
 
   def build
