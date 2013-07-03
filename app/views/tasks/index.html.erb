@@ -24,9 +24,9 @@
 
 <table class="table table-striped">
   <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Start date</th>
+    <th>Nome</th>
+    <th>Descrição</th>
+    <th>Data de Início</th>
     <th></th>
     <th></th>
     <th></th>
@@ -37,13 +37,13 @@
     <td><%= task.name %></td>
     <td><%= task.description %></td>
     <td><%= task.start_date %></td>
-    <td><%= link_to 'Show', task %></td>
-    <td><%= link_to 'Edit', edit_task_path(task) %></td>
-    <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Visualizar', task %></td>
+    <td><%= link_to 'Editar', edit_task_path(task) %></td>
+    <td><%= link_to 'Apagar', task, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Personal task', new_task_path %>
+<%= link_to 'Nova tarefa', new_task_path %>

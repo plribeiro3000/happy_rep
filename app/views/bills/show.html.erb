@@ -1,33 +1,38 @@
 <p>
-  <b>Kind:</b>
+  <b>Descrição:</b>
+  <%= @bill.description %>
+</p>
+
+<p>
+  <b>Tipo:</b>
   <%= @bill.kind %>
 </p>
 
 <p>
-  <b>Value:</b>
+  <b>Valor:</b>
   <%= @bill.value %>
 </p>
 
 <p>
-  <b>Expiration date:</b>
+  <b>Data de Vencimento:</b>
   <%= @bill.expiration_date %>
 </p>
 
 <p>
-  <b>Pay date:</b>
+  <b>Data de Pagamento:</b>
   <%= @bill.payment_date %>
 </p>
 
 <p>
-  <b>Penalty:</b>
+  <b>Multa:</b>
   <%= @bill.penalty %>
 </p>
 
 <p>
-  <b>Interest:</b>
+  <b>Juros:</b>
   <%= @bill.interest %>
 </p>
 
 
-<%= link_to 'Edit', edit_bill_path(@bill) %> |
-<%= link_to 'Back', bills_path %>
+<%= link_to 'Editar', edit_bill_path(@bill) %> |
+<%= link_to 'Voltar', bills_path %>

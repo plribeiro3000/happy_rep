@@ -25,10 +25,10 @@
 <table class="table table-striped">
   <tr>
     <th>Item</th>
-    <th>Date</th>
-    <th>Problem</th>
-    <th>Solution</th>
-    <th>Value</th>
+    <th>Data do Reparo</th>
+    <th>Problema</th>
+    <th>Solução</th>
+    <th>Valor</th>
     <th></th>
     <th></th>
     <th></th>
@@ -41,13 +41,13 @@
     <td><%= restitution.problem %></td>
     <td><%= restitution.solution %></td>
     <td><%= restitution.value %></td>
-    <td><%= link_to 'Show', restitution %></td>
-    <td><%= link_to 'Edit', edit_restitution_path(restitution) %></td>
-    <td><%= link_to 'Destroy', restitution, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Visualizar', restitution %></td>
+    <td><%= link_to 'Editar', edit_restitution_path(restitution) %></td>
+    <td><%= link_to 'Apagar', restitution, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Restitution', new_restitution_path %>
+<%= link_to 'Novo reparo', new_restitution_path %>
