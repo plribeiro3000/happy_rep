@@ -2,7 +2,7 @@ module TasksService
   include Zertico::Service
 
   def advanced_search(name, date)
-    Task.by_name(name).by_start_date(date)
+    Task.where(:profile_id => current_user.profile.id).by_name(name).by_start_date(date)
   end
 
   def find(id)
