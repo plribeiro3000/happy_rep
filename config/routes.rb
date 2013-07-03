@@ -26,4 +26,6 @@ HappyRep::Application.routes.draw do
   devise_for :users, :path => '/'
 
   root :to => "root#index"
+
+  get 'event_report' => 'report#events'
 end
