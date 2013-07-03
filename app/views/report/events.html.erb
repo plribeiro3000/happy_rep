@@ -1,0 +1,8 @@
+<p>Neste periodo entre <%= Date.today-7.days %> e <%= Date.today %> foram realizados <%= @events.count %> eventos distintos. Sao eles: </p>
+<br>
+<% @events.each do |event| %>
+    <%= event.name %> - <%=l event.event_date %> e com renda igual a R$ <%= event.profit %>.
+    <br>
+<% end %>
+<br>
+<p>A renda total de todos os eventos foi de R$ <%= @profit %></p>
