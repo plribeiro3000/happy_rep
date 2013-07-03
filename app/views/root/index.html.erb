@@ -1,0 +1,9 @@
+<% if @users.empty? %>
+ Não existem aniversariantes hoje.
+<% else %>
+  Os aniversariantes são:
+  <% @users.each do |user| %>
+    <%= user.name %>
+    <br>
+  <% end %>
+<% end %>

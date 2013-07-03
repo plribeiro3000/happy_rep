@@ -11,4 +11,6 @@ class Profile < ActiveRecord::Base
   validates :cpf, :presence => true, :cpf => true
   validates :phone, :presence => true
   validates :role, :presence => { :in => %w(admin resident former aggregate) }
+
+  scope :all_birthdays, -> { where(:birthday => Date.today) }
 end
