@@ -1,0 +1,25 @@
+<%= form_for(@vacine) do |f| %>
+  <% if @vacine.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@vacine.errors.count, "error") %> não permitiram essa vacina ser criada:</h2>
+
+      <ul>
+      <% @vacine.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :event_date %><br />
+    <%= f.date_select :event_date %>
+  </div>
+  <div class="field">
+    <%= f.label :animal_id %><br />
+    <%= f.select :animal_id, options_from_collection_for_select(Animal.all, :id, :name) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

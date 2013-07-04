@@ -1,0 +1,23 @@
+<table class="table table-striped">
+  <tr>
+    <th>Data</th>
+    <th>Animal</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @vacines.each do |vacine| %>
+  <tr>
+    <td><%= l vacine.event_date %></td>
+    <td><%= vacine.animal.name %></td>
+    <td><%= link_to 'Visualizar', vacine %></td>
+    <td><%= link_to 'Editar', edit_vacine_path(vacine) %></td>
+    <td><%= link_to 'Apagar', vacine, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nova vacina', new_vacine_path %>

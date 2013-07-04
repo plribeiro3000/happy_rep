@@ -20,6 +20,7 @@ class Ability
       can :manage, :resident
       can :manage, :restitution
       can :manage, :task
+      can :manage, :vacine
     elsif profile_accessor.resident?
       can [ :index, :show ], :admin
       can [ :index, :show, :new, :create ], :aggregate
@@ -34,6 +35,7 @@ class Ability
       can [ :index, :show, :new, :create ], :resident
       can [ :index, :show, :new, :create ], :restitution
       can :manage, :task
+      can [ :index, :show, :new, :create ], :vacine
     elsif profile_accessor.former?
       can [ :index, :show ], :admin
       can [ :index, :show ], :aggregate

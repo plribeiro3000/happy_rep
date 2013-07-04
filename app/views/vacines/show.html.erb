@@ -1,0 +1,12 @@
+<p>
+  <b>Data:</b>
+  <%= l @vacine.event_date %>
+</p>
+<p>
+  <b>Animal:</b>
+  <%= @vacine.animal %>
+</p>
+
+
+<%= link_to 'Editar', edit_vacine_path(@vacine) %> |
+<%= link_to 'Voltar', vacines_path %>

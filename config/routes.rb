@@ -23,6 +23,8 @@ HappyRep::Application.routes.draw do
 
   resources :aggregates
 
+  resources :vacines
+
   devise_for :users, :path => '/'
 
   root :to => "root#index"

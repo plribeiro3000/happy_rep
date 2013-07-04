@@ -1,0 +1,2 @@
+class VacinesController < AuthorizedController
+end
