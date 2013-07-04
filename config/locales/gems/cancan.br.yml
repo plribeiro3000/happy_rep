@@ -1,0 +1,4 @@
+#! encoding: utf-8
+br:
+  unauthorized:
+    default: "Você não está autorizado a acessar essa página"
