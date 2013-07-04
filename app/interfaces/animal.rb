@@ -3,10 +3,10 @@ class Animal < ActiveRecord::Base
 
   has_many :vacines
 
-  validate :name, :presence => true
-  validate :race, :presence => true
-  validate :species, :presence => true
-  validate :birth_date, :presence => true
+  validates :name, :presence => true
+  validates :race, :presence => true
+  validates :species, :presence => true
+  validates :birth_date, :presence => true
 
   scope :by_name, -> name { where(:name => name) if name.present? }
   scope :by_race, -> race { where(:race => race) if race.present? }
